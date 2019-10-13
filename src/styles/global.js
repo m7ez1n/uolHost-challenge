@@ -16,4 +16,14 @@ export default createGlobalStyle`
     background: #f8f8ff;
     -webkit-font-smoothing: antialiased !important;
   }
+
+  #root {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+  }
+
+  button {
+    cursor: pointer;
+  }
 `;
