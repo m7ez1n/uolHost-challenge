@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
+
   * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,10 @@ export default createGlobalStyle`
   body {
     background: #f8f8ff;
     -webkit-font-smoothing: antialiased !important;
+  }
+
+  body, input, button {
+    font-family: 'Maven Pro', sans-serif;
   }
 
   #root {
