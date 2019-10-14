@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiUser } from 'react-icons/fi';
-import { Container, Panel } from './styles';
+import { Container, Panel, ClientList } from './styles';
 
 export default function Home() {
   return (
@@ -14,7 +14,29 @@ export default function Home() {
       <Panel>
         <h4>Listagem de usuários</h4>
         <button type="button">Novo cliente</button>
+        <p>Escolha um cliente para visualizar os detalhes</p>
       </Panel>
+
+      <ClientList>
+        <li>
+          <div>
+            <strong>John Doe</strong>
+            <p>jonhdoe@hotmail.com</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>John Doe</strong>
+            <p>jonhdoe@hotmail.com</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>John Doe</strong>
+            <p>jonhdoe@hotmail.com</p>
+          </div>
+        </li>
+      </ClientList>
     </Container>
   );
 }
