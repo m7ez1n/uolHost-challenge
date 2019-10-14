@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiUser } from 'react-icons/fi';
-import { Container } from './styles';
+import { Container, Panel } from './styles';
 
 export default function Home() {
   return (
@@ -10,6 +10,11 @@ export default function Home() {
         Painel de clientes
       </h1>
       <hr />
+
+      <Panel>
+        <h4>Listagem de usuários</h4>
+        <button type="button">Novo cliente</button>
+      </Panel>
     </Container>
   );
 }

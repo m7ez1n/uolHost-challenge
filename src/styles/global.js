@@ -10,7 +10,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body #root {
+  html, body, #root {
     min-height: 100%;
   }
 
@@ -19,7 +19,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
   }
 
-  body, input, button {
+  body, input, button, p {
     font-family: 'Maven Pro', sans-serif;
   }
 
