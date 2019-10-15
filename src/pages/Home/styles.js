@@ -44,10 +44,9 @@ export const Panel = styled.div`
   }
 
   button {
-    margin-left: 800px;
-    margin-right: 60px;
+    margin: 3px 0 6px 800px;
     background: #daa520;
-    color: #fff;
+    color: #f8f8ff;
     border: 0;
     border-radius: 4px;
     padding: 8px 10px;
@@ -61,7 +60,7 @@ export const Panel = styled.div`
 `;
 
 export const ClientList = styled.ul`
-  max-width: 1150px;
+  max-width: 1200px;
   margin-top: 15px;
   padding-top: 20px;
   align-items: center;
