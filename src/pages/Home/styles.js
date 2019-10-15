@@ -63,11 +63,12 @@ export const Panel = styled.div`
 export const ClientList = styled.ul`
   margin-top: 15px;
   padding-top: 20px;
+  align-items: center;
   list-style: none;
 
   li {
     display: flex;
-    padding: 20px 20px;
+    padding: 15px 20px;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
     & + li {
@@ -83,6 +84,13 @@ export const ClientList = styled.ul`
     p {
       color: #808080;
       font-size: 16px;
+    }
+
+    li {
+      border: 0;
+      margin-top: -16px;
+      padding-left: 150px;
+      flex-direction: column;
     }
   }
 `;

@@ -23,18 +23,30 @@ export default function Home() {
             <strong>John Doe</strong>
             <p>jonhdoe@hotmail.com</p>
           </div>
+          <li>
+            <strong>882.782.720-00</strong>
+            <p>(47)98515-5001</p>
+          </li>
         </li>
         <li>
           <div>
             <strong>John Doe</strong>
             <p>jonhdoe@hotmail.com</p>
           </div>
+          <li>
+            <strong>882.782.720-00</strong>
+            <p>(47)98515-5001</p>
+          </li>
         </li>
         <li>
           <div>
             <strong>John Doe</strong>
             <p>jonhdoe@hotmail.com</p>
           </div>
+          <li>
+            <strong>882.782.720-00</strong>
+            <p>(47)98515-5001</p>
+          </li>
         </li>
       </ClientList>
     </Container>
