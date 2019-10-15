@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  max-width: 900px;
+  max-width: 1300px;
   background: #f8f8ff;
   padding: 30px;
-  margin: 80px auto;
+  margin: 60px auto;
 
   h1 {
     font-size: 30px;
@@ -91,6 +91,18 @@ export const ClientList = styled.ul`
       margin-top: -16px;
       padding-left: 150px;
       flex-direction: column;
+    }
+
+    small {
+      color: #808080;
+      font-size: 16px;
+      margin-top: 12px;
+      border: 0;
+      padding-left: 80px;
+
+      svg {
+        margin-right: 6px;
+      }
     }
   }
 `;
