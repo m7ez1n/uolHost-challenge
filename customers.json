@@ -1,0 +1,44 @@
+{
+	"data": [
+		{
+			"_id": 1,
+			"name": "Emanuella Santos Soares",
+		    "cpf": "123.456.789-00",
+			"contact": {
+			    "email": "contato@ldrinformatica.com.br",
+    			"tel": "(11) 9998-8745"
+			},
+			"status": "Ativo"
+		},
+		{
+			"_id": 2,
+			"name": "Jose Luis Paller Furjan",
+			"cpf": "123.456.789-01",
+			"contact": {
+			    "email": "contato@ttt.com.br",
+    			"tel": "(11) 9998-8743"
+			},
+			"status": "Aguardando ativação"
+		},
+		{
+			"_id": 3,
+			"name": "Hamilton Tenório da Silva",
+			"contact": {
+			    "email": "contato@123.com.br",
+			    "tel": "(11) 9998-8793"
+			},
+			"cpf": "123.456.789-30",
+			"status": "Inativo"
+		},
+		{
+			"_id": 4,
+			"name": "Leonardo Teodoro da Silva",
+			"contact": {
+			    "email": "contato@loja.com.br",
+			    "tel": "(11) 9998-0003"
+			},
+			"cpf": "123.456.789-23",
+			"status": "Desativado"
+		}
+	]
+}
