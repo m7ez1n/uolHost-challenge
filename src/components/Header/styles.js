@@ -5,7 +5,7 @@ export const Container = styled.header`
   justify-content: center;
   margin: 0 auto;
   max-height: 60px;
-  width: 1000px;
+  width: 1100px;
   background: #333333;
 
   img {
