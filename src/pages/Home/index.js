@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiUser } from 'react-icons/fi';
 import { FaCircle } from 'react-icons/fa';
-import { Container, Panel, ClientList } from './styles';
+import { Container, Panel, ClientList, ListButton } from './styles';
 
 export default function Home() {
   return (
@@ -32,6 +32,7 @@ export default function Home() {
             <FaCircle size={12} color="#2e8b57" />
             Ativo
           </small>
+          <ListButton type="button">Editar</ListButton>
         </li>
         <li>
           <div>
@@ -46,6 +47,7 @@ export default function Home() {
             <FaCircle size={14} color="#dc143c" />
             Inativo
           </small>
+          <ListButton type="button">Editar</ListButton>
         </li>
         <li>
           <div>
@@ -60,6 +62,7 @@ export default function Home() {
             <FaCircle size={14} color="#ffa500" />
             Aguardando ativação
           </small>
+          <ListButton type="button">Editar</ListButton>
         </li>
         <li>
           <div>
@@ -74,6 +77,7 @@ export default function Home() {
             <FaCircle size={14} color="#696969" />
             Desativado
           </small>
+          <ListButton type="button">Editar</ListButton>
         </li>
       </ClientList>
     </Container>

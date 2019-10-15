@@ -44,8 +44,8 @@ export const Panel = styled.div`
   }
 
   button {
-    margin-left: 680px;
-    margin-right: 35px;
+    margin-left: 800px;
+    margin-right: 60px;
     background: #daa520;
     color: #fff;
     border: 0;
@@ -61,6 +61,7 @@ export const Panel = styled.div`
 `;
 
 export const ClientList = styled.ul`
+  max-width: 1150px;
   margin-top: 15px;
   padding-top: 20px;
   align-items: center;
@@ -104,5 +105,23 @@ export const ClientList = styled.ul`
         margin-right: 6px;
       }
     }
+  }
+`;
+
+export const ListButton = styled.button`
+  font-size: 18px;
+  font-weight: bold;
+  background: #f8f8ff;
+  color: #daa520;
+  border: 1px solid #daa520;
+  border-radius: 6px;
+  max-width: 200px;
+  margin: 3px 0 6px 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &:hover {
+    background: #daa520;
+    color: #f8f8ff;
   }
 `;
