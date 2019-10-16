@@ -36,21 +36,22 @@ export const Panel = styled.div`
 
   h4 {
     color: #708090;
+    margin-bottom: -20px;
   }
 
   p {
-    margin-top: -20px;
     color: #808080;
   }
 
   button {
-    margin: 3px 0 6px 800px;
+    margin: 3px 0 2px 850px;
     background: #daa520;
     color: #f8f8ff;
     border: 0;
     border-radius: 4px;
-    padding: 8px 10px;
+    padding: 10px 10px;
     width: 100px;
+    cursor: initial;
     font-weight: normal;
     transition: background 0.2s;
     &:hover {
@@ -60,67 +61,71 @@ export const Panel = styled.div`
 `;
 
 export const ClientList = styled.ul`
+  display: grid;
+  grid-gap: 30px;
+  grid-template-rows: repeat(3, 1fr);
   max-width: 1200px;
-  margin-top: 15px;
-  padding-top: 20px;
-  align-items: center;
+  margin-top: 40px;
   list-style: none;
 
   li {
-    display: flex;
-    padding: 15px 20px;
+    padding: 20px 15px 20px 15px;
     border: 1px solid #d3d3d3;
-    border-radius: 4px;
-    & + li {
-      margin-top: 20px;
-    }
 
     strong {
+      display: flex;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-bottom: 3px;
       font-weight: normal;
       color: #4f4f4f;
       font-size: 19px;
     }
 
-    p {
-      color: #808080;
-      font-size: 16px;
-    }
-
-    li {
-      border: 0;
-      margin-top: -16px;
-      padding-left: 150px;
-      flex-direction: column;
-    }
-
     small {
       color: #808080;
       font-size: 16px;
-      margin-top: 12px;
-      border: 0;
-      padding-left: 80px;
+      padding-left: 20px;
+    }
 
-      svg {
-        margin-right: 6px;
+    div {
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        margin-top: -53px;
+        padding-bottom: 3px;
+        padding-left: 400px;
+      }
+
+      small {
+        padding-left: 400px;
       }
     }
-  }
-`;
 
-export const ListButton = styled.button`
-  font-size: 18px;
-  font-weight: bold;
-  background: #f8f8ff;
-  color: #daa520;
-  border: 1px solid #daa520;
-  border-radius: 6px;
-  max-width: 200px;
-  margin: 3px 0 6px 100px;
-  padding-left: 30px;
-  padding-right: 30px;
+    p {
+      color: #808080;
+      font-size: 16px;
+      padding-left: 620px;
+      margin-top: -30px;
+    }
 
-  &:hover {
-    background: #daa520;
-    color: #f8f8ff;
+    button {
+      font-size: 18px;
+      font-weight: normal;
+      background: #f8f8ff;
+      color: #daa520;
+      border: 1px solid #daa520;
+      border-radius: 6px;
+      padding: 10px 30px 10px 30px;
+      position: relative;
+      margin-top: -30px;
+      float: right;
+
+      &:hover {
+        background: #daa520;
+        color: #f8f8ff;
+      }
+    }
   }
 `;

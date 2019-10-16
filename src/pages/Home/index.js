@@ -45,7 +45,7 @@ export default function Home() {
               <small>{client.contact.tel}</small>
             </div>
             <p>
-              <FaCircle size={12} color="#daa520" />
+              <FaCircle size={12} />
               {` ${client.status}`}
             </p>
             <button type="button">Editar</button>
