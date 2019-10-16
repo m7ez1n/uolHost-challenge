@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { FiUser } from 'react-icons/fi';
 import { FaCircle } from 'react-icons/fa';
 import api from '../../services/api';
+import * as ClientActions from '../../store/modules/client/actions';
+
 import { Container, Panel, ClientList } from './styles';
 
 export default function Home() {
@@ -20,6 +23,12 @@ export default function Home() {
 
     loadClients();
   }, []);
+
+  const dispatch = useDispatch();
+
+  function updateClient(id, name, email, phone, status) {
+    dispatch(ClientActions.updateClientRequest(id, name, email, phone, status));
+  }
 
   return (
     <Container>
@@ -48,7 +57,21 @@ export default function Home() {
               <FaCircle size={12} />
               {` ${client.status}`}
             </p>
-            <button type="button">Editar</button>
+            <button
+              type="button"
+              onClick={() =>
+                updateClient(
+                  // eslint-disable-next-line no-underscore-dangle
+                  client._id,
+                  client.name,
+                  client.contact.email,
+                  client.contact.tel,
+                  client.status
+                )
+              }
+            >
+              Editar
+            </button>
           </li>
         ))}
       </ClientList>
