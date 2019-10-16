@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiUser } from 'react-icons/fi';
 import { FaCircle } from 'react-icons/fa';
-import { Container, Panel, ClientList, ListButton } from './styles';
+import api from '../../services/api';
+import { Container, Panel, ClientList } from './styles';
 
 export default function Home() {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    async function loadClients() {
+      const response = await api.get('data');
+
+      const data = response.data.map(client => ({
+        ...client,
+      }));
+
+      setClients(data);
+    }
+
+    loadClients();
+  }, []);
+
   return (
     <Container>
       <h1>
@@ -19,66 +36,21 @@ export default function Home() {
       </Panel>
 
       <ClientList>
-        <li>
-          <div>
-            <strong>John Doe</strong>
-            <p>jonhdoe@hotmail.com</p>
-          </div>
-          <li>
-            <strong>882.782.720-00</strong>
-            <p>(47)98515-5001</p>
+        {clients.map(client => (
+          <li key={client.id}>
+            <strong>{client.name}</strong>
+            <small>{client.contact.email}</small>
+            <div>
+              <strong>{client.cpf}</strong>
+              <small>{client.contact.tel}</small>
+            </div>
+            <p>
+              <FaCircle size={12} color="#daa520" />
+              {` ${client.status}`}
+            </p>
+            <button type="button">Editar</button>
           </li>
-          <small>
-            <FaCircle size={12} color="#2e8b57" />
-            Ativo
-          </small>
-          <ListButton type="button">Editar</ListButton>
-        </li>
-        <li>
-          <div>
-            <strong>John Doe</strong>
-            <p>jonhdoe@hotmail.com</p>
-          </div>
-          <li>
-            <strong>882.782.720-00</strong>
-            <p>(47)98515-5001</p>
-          </li>
-          <small>
-            <FaCircle size={14} color="#dc143c" />
-            Inativo
-          </small>
-          <ListButton type="button">Editar</ListButton>
-        </li>
-        <li>
-          <div>
-            <strong>John Doe</strong>
-            <p>jonhdoe@hotmail.com</p>
-          </div>
-          <li>
-            <strong>882.782.720-00</strong>
-            <p>(47)98515-5001</p>
-          </li>
-          <small>
-            <FaCircle size={14} color="#ffa500" />
-            Aguardando ativação
-          </small>
-          <ListButton type="button">Editar</ListButton>
-        </li>
-        <li>
-          <div>
-            <strong>John Doe</strong>
-            <p>jonhdoe@hotmail.com</p>
-          </div>
-          <li>
-            <strong>882.782.720-00</strong>
-            <p>(47)98515-5001</p>
-          </li>
-          <small>
-            <FaCircle size={14} color="#696969" />
-            Desativado
-          </small>
-          <ListButton type="button">Editar</ListButton>
-        </li>
+        ))}
       </ClientList>
     </Container>
   );
