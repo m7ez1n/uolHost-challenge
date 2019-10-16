@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
 import { FaCircle } from 'react-icons/fa';
 import api from '../../services/api';
@@ -40,7 +41,9 @@ export default function Home() {
 
       <Panel>
         <h4>Listagem de usuários</h4>
-        <button type="button">Novo cliente</button>
+        <Link to="/clients">
+          <button type="button">Novo cliente</button>
+        </Link>
         <p>Escolha um cliente para visualizar os detalhes</p>
       </Panel>
 
