@@ -12,18 +12,6 @@ export default function Home() {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    const storageClients = localStorage.getItem('clients');
-
-    if (storageClients) {
-      setClients(JSON.parse(storageClients));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('clients', JSON.stringify(clients));
-  }, [clients]);
-
-  useEffect(() => {
     async function loadClients() {
       const response = await api.get('data');
 
@@ -61,8 +49,7 @@ export default function Home() {
 
       <ClientList>
         {clients.map(client => (
-          // eslint-disable-next-line no-underscore-dangle
-          <li key={client._id}>
+          <li key={client.id}>
             <strong>{client.name}</strong>
             <small>{client.contact.email}</small>
             <div>
