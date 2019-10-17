@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
 import { FaCircle } from 'react-icons/fa';
 import api from '../../services/api';
-import * as ClientActions from '../../store/modules/client/actions';
+import * as ClientActions from '../../store/modules/home/actions';
 
 import { Container, Panel, ClientList } from './styles';
 
