@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
+import newClient from './formClient/reducer';
+
 const reducers = combineReducers({
-  // Remova essa linha depois de adicionar seus ducks
-  example: () => [],
+  newClient,
 });
 
 export default reducers;
