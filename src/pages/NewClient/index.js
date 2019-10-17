@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
+import * as ClientActions from '../../store/modules/formClient/actions';
 
 import { Container, FormClient } from './styles';
 
 export default function NewClient() {
+  const dispatch = useDispatch();
+
+  function createClient(id, name, cpf, email, phone, status) {
+    dispatch(
+      ClientActions.addNewClientRequest(id, name, cpf, email, phone, status)
+    );
+  }
+
   return (
     <Container>
       <h1>
@@ -48,7 +58,14 @@ export default function NewClient() {
           </Link>
         </div>
         <div className="salvar">
-          <button type="button">Salvar</button>
+          <button
+            type="button"
+            onClick={() => {
+              createClient();
+            }}
+          >
+            Salvar
+          </button>
         </div>
       </FormClient>
     </Container>
