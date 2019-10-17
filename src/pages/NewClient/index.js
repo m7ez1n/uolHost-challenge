@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
 
 import { Container, FormClient } from './styles';
@@ -42,7 +43,9 @@ export default function NewClient() {
           </div>
         </div>
         <div className="voltar">
-          <button type="button">Voltar</button>
+          <Link to="/">
+            <button type="button">Voltar</button>
+          </Link>
         </div>
         <div className="salvar">
           <button type="button">Salvar</button>
