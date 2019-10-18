@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import newClient from './formClient/reducer';
+import editClient from './home/reducer';
 
 const reducers = combineReducers({
-  newClient,
+  editClient,
 });
 
 export default reducers;

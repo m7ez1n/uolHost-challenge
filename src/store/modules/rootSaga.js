@@ -1,5 +1,7 @@
 import { all } from 'redux-saga/effects';
 
+import editClient from './home/sagas';
+
 export default function* rootSaga() {
-  return yield all([]);
+  return yield all([editClient]);
 }
